@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66CB6A"
+    tools:context=".MainActivity">
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:strokeWidth="0dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardBackgroundColor="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="373dp"
+            android:layout_height="382dp">
+
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/iran_sans_x_black"
+                android:gravity="center"
+                android:text="Password Generator"
+                android:textSize="25sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_design"
+                android:drawableEnd="@drawable/ic_copy"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:gravity="center"
+                android:hint="Password"
+                android:paddingHorizontal="15dp"
+                android:textIsSelectable="true"
+                android:textSize="17sp"
+                app:layout_constraintTop_toBottomOf="@id/tvAppName"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxLowercase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="#66BB6A"
+                android:checked="true"
+                android:fontFamily="@font/iransans_x_num_bold"
+                android:text="Lowercase (a-z)"
+                app:layout_constraintStart_toStartOf="@id/tvPassword"
+                app:layout_constraintTop_toBottomOf="@id/tvPassword" />
+
+            <CheckBox
+                android:id="@+id/checkboxNumbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:buttonTint="#66BB6A"
+                android:fontFamily="@font/iransans_x_num_bold"
+                android:text="Numbers (0-9)"
+                app:layout_constraintStart_toStartOf="@id/checkboxLowercase"
+                app:layout_constraintTop_toBottomOf="@id/checkboxLowercase" />
+
+            <CheckBox
+                android:id="@+id/checkboxUppercase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#66BB6A"
+                android:fontFamily="@font/iransans_x_num_bold"
+                android:text="Uppercase (A-Z)"
+                app:layout_constraintEnd_toEndOf="@id/tvPassword"
+                app:layout_constraintStart_toEndOf="@id/checkboxLowercase"
+                app:layout_constraintTop_toTopOf="@id/checkboxLowercase" />
+
+            <CheckBox
+                android:id="@+id/checkboxSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:buttonTint="#66BB6A"
+                android:fontFamily="@font/iransans_x_num_bold"
+                android:text="Symbols"
+                app:layout_constraintStart_toStartOf="@id/checkboxUppercase"
+                app:layout_constraintTop_toBottomOf="@id/checkboxUppercase" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/generateButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#00C853"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:text="Generate Password"
+                android:textSize="15sp"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkboxSymbol" />
+
+            <TextView
+                android:id="@+id/editTextText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="By Bhupesh"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="347dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
